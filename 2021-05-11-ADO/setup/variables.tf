@@ -46,7 +46,7 @@ variable "az_state_key" {
 
 variable "az_client_id" {
   type        = string
-  description = "Client ID with permissions to create resources in Azure, use env variables"
+  description = "f1798e8a-d281-422a-9732-95f86d2b6532"
 }
 
 variable "az_client_secret" {
@@ -56,12 +56,12 @@ variable "az_client_secret" {
 
 variable "az_subscription" {
   type        = string
-  description = "91364968-9700-4d99-a4bd-098e044c5a67, use env variables"
+  description = "91364968-9700-4d99-a4bd-098e044c5a67"
 }
 
 variable "az_tenant" {
   type        = string
-  description = "4c232193-6b96-4d12-88b6-b60493bb8a0c, use env variables"
+  description = "4c232193-6b96-4d12-88b6-b60493bb8a0c"
 }
 
 resource "random_integer" "suffix" {
