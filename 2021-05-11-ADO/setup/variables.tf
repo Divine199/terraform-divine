@@ -17,7 +17,7 @@ variable "ado_pipeline_yaml_path_1" {
 
 variable "divine_github_pat" {
   type        = string
-  description = "Personal authentication token for GitHub repo"
+  description = "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"
   sensitive   = true
 }
 
