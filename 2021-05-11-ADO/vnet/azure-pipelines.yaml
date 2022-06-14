@@ -70,10 +70,10 @@ stages:
       displayName: Plan Terraform Deployment
       env:
         ARM_SAS_TOKEN: $(sas_token)
-        ARM_CLIENT_ID: $(az_client_id)
+        ARM_CLIENT_ID: $(f1798e8a-d281-422a-9732-95f86d2b6532)
         ARM_CLIENT_SECRET: $(az_client_secret)
-        ARM_SUBSCRIPTION_ID: $(az_subscription)
-        ARM_TENANT_ID: $(az_tenant)
+        ARM_SUBSCRIPTION_ID: $(91364968-9700-4d99-a4bd-098e044c5a67)
+        ARM_TENANT_ID: $(4c232193-6b96-4d12-88b6-b60493bb8a0c)
       inputs:
         command: 'plan'
         workingDirectory: '$(System.DefaultWorkingDirectory)/2021-05-11-ADO/vnet'
@@ -120,10 +120,10 @@ stages:
       displayName: Apply Terraform Deployment
       env:
         ARM_SAS_TOKEN: $(sas_token)
-        ARM_CLIENT_ID: $(az_client_id)
+        ARM_CLIENT_ID: $(f1798e8a-d281-422a-9732-95f86d2b6532)
         ARM_CLIENT_SECRET: $(az_client_secret)
-        ARM_SUBSCRIPTION_ID: $(az_subscription)
-        ARM_TENANT_ID: $(az_tenant)
+        ARM_SUBSCRIPTION_ID: $(91364968-9700-4d99-a4bd-098e044c5a67)
+        ARM_TENANT_ID: $(4c232193-6b96-4d12-88b6-b60493bb8a0c)
       inputs:
         command: 'apply'
         workingDirectory: '$(System.DefaultWorkingDirectory)/2021-05-11-ADO/vnet'
