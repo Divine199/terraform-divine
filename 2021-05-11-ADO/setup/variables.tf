@@ -1,12 +1,12 @@
-variable "ado_org_service_url" {
+variable "dev.azure.com/chamohdivine/" {
   type        = string
   description = "Org service url for Azure DevOps"
 }
 
-variable "ado_github_repo" {
+variable "divine_github_repo" {
   type        = string
   description = "Name of the repository in the format <GitHub Org>/<RepoName>"
-  default     = "ned1313/terraform-tuesdays"
+  default     = "Divine199/terraform-divine"
 }
 
 variable "ado_pipeline_yaml_path_1" {
@@ -15,7 +15,7 @@ variable "ado_pipeline_yaml_path_1" {
   default     = "2021-05-11-ADO/vnet/azure-pipelines.yaml"
 }
 
-variable "ado_github_pat" {
+variable "divine_github_pat" {
   type        = string
   description = "Personal authentication token for GitHub repo"
   sensitive   = true
@@ -56,12 +56,12 @@ variable "az_client_secret" {
 
 variable "az_subscription" {
   type        = string
-  description = "Client ID subscription, use env variables"
+  description = "91364968-9700-4d99-a4bd-098e044c5a67, use env variables"
 }
 
 variable "az_tenant" {
   type        = string
-  description = "Client ID Azure AD tenant, use env variables"
+  description = "4c232193-6b96-4d12-88b6-b60493bb8a0c, use env variables"
 }
 
 resource "random_integer" "suffix" {
