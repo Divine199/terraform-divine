@@ -1,8 +1,8 @@
-# Create ADO objects for pipeline
+# Create Divine objects for pipeline
 
 provider "azuredevops" {
   org_service_url = var.dev.azure.com/chamohdivine/
-  # Authentication through PAT defined with AZDO_PERSONAL_ACCESS_TOKEN 
+  # Authentication through PAT defined with divine199_PERSONAL_ACCESS_TOKEN 
 }
 
 resource "azuredevops_project" "project" {
@@ -28,7 +28,7 @@ resource "azuredevops_serviceendpoint_github" "serviceendpoint_github" {
   service_endpoint_name = "terraform-divine"
 
   auth_personal {
-    personal_access_token = var.divine_github_pat
+    personal_access_token = var.divine199_github_pat
   }
 }
 
@@ -94,7 +94,7 @@ resource "azuredevops_build_definition" "pipeline_1" {
 
   depends_on = [azuredevops_resource_authorization.auth]
   project_id = azuredevops_project.project.id
-  name       = local.ado_pipeline_name_1
+  name       = local.divine_pipeline_name_1
 
   ci_trigger {
     use_yaml = true
@@ -102,7 +102,7 @@ resource "azuredevops_build_definition" "pipeline_1" {
 
   repository {
     repo_type             = "GitHub"
-    repo_id               = var.ado_github_repo
+    repo_id               = var.divine199_github_repo
     branch_name           = "main"
     yml_path              = var.ado_pipeline_yaml_path_1
     service_connection_id = azuredevops_serviceendpoint_github.serviceendpoint_github.id
